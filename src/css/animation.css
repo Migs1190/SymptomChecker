@@ -1,0 +1,56 @@
+@keyframes pop {
+  0% {
+    transform: scale(0);
+  }
+}
+@keyframes flatline {
+  0% {
+    left: 0;
+    top: 51%;
+  }
+  10% {
+    left: 15%;
+    top: 51%;
+    opacity: 1;
+  }
+  20% {
+    left: 27%;
+    top: 51%;
+    opacity: 1;
+  }
+  32% {
+    left: 36%;
+    top: 33%;
+    opacity: 1;
+  }
+  48% {
+    left: 50%;
+    top: 62%;
+    opacity: 1;
+  }
+  64% {
+    left: 62%;
+    top: 40%;
+    opacity: 1;
+  }
+  80% {
+    left: 71%;
+    top: 51%;
+    opacity: 1;
+  }
+  90% {
+    left: 86%;
+    top: 51%;
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    top: 51%;
+  }
+}
+@keyframes beat {
+  0% {
+    transform: scale(1.2);
+    text-shadow: 0px 0px 10px;
+  }
+}

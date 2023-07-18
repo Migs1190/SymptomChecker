@@ -1,0 +1,40 @@
+{
+  "name": "SymptomChecker",
+  "type": "commonjs",
+  "productName": "Symptom Checker",
+  "version": "1.0.0",
+  "description": "A symptom checker duh",
+  "main": "src/JavaScript/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "keywords": [
+    "symptom",
+    "checker",
+    "illness",
+    "disease",
+    "treatment",
+    "medicine",
+    "cure",
+    "diagnosis"
+  ],
+  "author": "Migs",
+  "license": "MIT",
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
+    "mysql": "^2.18.1",
+    "require-node": "^2.0.8"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.5",
+    "@electron-forge/maker-deb": "^6.0.5",
+    "@electron-forge/maker-rpm": "^6.0.5",
+    "@electron-forge/maker-squirrel": "^6.0.5",
+    "@electron-forge/maker-zip": "^6.0.5",
+    "electron": "23.1.1"
+  }
+}

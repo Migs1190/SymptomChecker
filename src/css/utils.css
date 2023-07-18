@@ -1,0 +1,36 @@
+:root {
+  --main: #191a26;
+  --main-darker: #181723;
+  --secondary: #1f1f2a;
+  --core: #00d2ff;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.upper {
+  text-transform: uppercase;
+}
+.neon {
+  text-shadow: 0 0 2px;
+}
+.elec-line-light {
+  color: var(--core);
+}
+.elec-line-dark {
+  color: var(--main);
+}
+.sizing-container {
+  padding: 0 20px;
+}
+.width-100 {
+  width: 100%;
+}
+.opacity-0 {
+  opacity: 0;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}

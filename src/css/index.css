@@ -1,0 +1,365 @@
+/*-------------------------General------------------------------*/
+:root {
+  min-width: 500px;
+  min-height: 500px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "kanit", sans-serif;
+  background-color: var(--secondary);
+  background-color: var(--main);
+  color: var(--core);
+}
+#main-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+img {
+  width: 10%;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+/*-------------------------Header------------------------------*/
+/*---------General-Logo---------*/
+header {
+  margin-bottom: 50px;
+  box-shadow: 0 1px 15px #0000004d;
+}
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.flatline-container {
+  position: relative;
+}
+.flatline {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  color: red;
+  text-shadow: 0 0 15px red;
+  opacity: 0;
+}
+
+.steps {
+  margin: 0 auto;
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.step {
+  height: 52px;
+}
+.step-link {
+  margin-bottom: 10px;
+  color: var(--core);
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.step-link:hover {
+  text-shadow: 0 0 10px;
+}
+.step-name {
+  font-size: 14px;
+}
+.step:hover .step-heart {
+  animation: beat 1s 0s ease infinite running;
+}
+/*---------Splash-Logo---------*/
+.splash-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.splash-logo {
+  width: 100vw;
+  height: 100vh;
+  animation: pop 2s;
+}
+.splash-heart {
+  font-size: 150px;
+  animation: beat 2s 2s ease-out infinite running;
+}
+.splash-flatline {
+  font-size: 12px;
+  animation: flatline 0.7s 2s ease-out infinite running;
+}
+.splash-title {
+  margin: 0;
+  font-family: "chakra petch", sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+}
+/*---------Header-Logo---------*/
+.main-heart {
+  font-size: 80px;
+  animation: beat 2s 0s ease-out infinite running;
+  transition: animation 0.5s;
+}
+.main-flatline {
+  font-size: 8px;
+  animation: flatline 1s 0s ease-out infinite running;
+}
+.main-flatline-container:hover .main-heart {
+  animation: beat 0.5s 0s ease infinite running;
+}
+.main-flatline-container:hover .main-flatline {
+  animation: flatline 0.5s 0s ease-out infinite running;
+}
+/*-------------------------Form------------------------------*/
+.form-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+.form-counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border: 5px solid rgba(255, 255, 255, 0.4);
+  border-radius: 100px;
+  margin-bottom: 30px;
+  transition: all 0.5s;
+}
+input[name="age-input"] {
+  position: absolute;
+  width: 65px;
+  height: 50px;
+  margin: 0 15px;
+  font-family: "chakra petch", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  background: transparent;
+  color: var(--core);
+  border: 0;
+  z-index: 2;
+}
+.form-counter-arrows {
+  position: absolute;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  transform: scale(0, 1);
+  opacity: 0;
+  transition: all 0.3s;
+  z-index: 1;
+}
+.age-counter {
+  cursor: pointer;
+}
+.note-msg {
+  position: absolute;
+  top: -15%;
+  left: 95%;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+.note {
+  z-index: 2;
+  transition: all 0.2s;
+}
+.note-window {
+  position: relative;
+  width: 200px;
+  height: 50px;
+  margin-left: -8px;
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 11px;
+  padding: 0 5px 0 15px;
+  color: transparent;
+  transition: all 0.5s;
+}
+.gender-btn {
+  display: inline-block;
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 70px;
+  margin: 0 20px;
+  font-family: "chakra petch", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: var(--main);
+  color: var(--core);
+  position: relative;
+  transition: all 0.5s;
+}
+/*------------Form-Effects-----------*/
+.form-counter:hover {
+  width: 180px;
+  border: 5px solid var(--core);
+  box-shadow: 0 0 10px;
+}
+.form-counter:hover .form-counter-arrows {
+  transform: scale(1, 1);
+  opacity: 1;
+}
+.form-counter:hover .layer {
+  opacity: 1;
+  visibility: visible;
+}
+.form-counter:hover .age-counter {
+  transform: scale(1, 1);
+}
+input[name="age-input"]:focus {
+  border: none;
+  outline: none;
+}
+.note-window::before {
+  content: "";
+  position: absolute;
+  padding: 10px;
+  box-shadow: 0 0 0 0 var(--core);
+  color: var(--core);
+  top: 50%;
+  left: 0%;
+  border-radius: 50px;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: all 0.5s;
+}
+.note:hover {
+  text-shadow: 0 0 2px;
+}
+.note:hover + .note-window {
+  color: var(--main-darker);
+}
+.note:hover + .note-window::before {
+  box-shadow: 0 0 0 250px;
+}
+.gender-btn::after,
+.gender-btn::before {
+  display: flex;
+  position: absolute;
+  background-color: var(--core);
+  color: var(--main);
+  height: 100%;
+  top: 0;
+  transform-origin: 0 0;
+  transition: all 0.5s;
+}
+.gender-btn::after {
+  width: 40%;
+  right: 0;
+}
+.gender-btn::before {
+  justify-content: end;
+  width: 60%;
+  left: 0;
+}
+.male-btn::after {
+  content: "le";
+}
+.female-btn::after {
+  content: "ale";
+  border-radius: 0 20px 20px 0;
+}
+.male-btn::before {
+  content: "Ma";
+  border-radius: 20px 0 0 20px;
+}
+.female-btn::before {
+  content: "Fem";
+}
+.gender-btn:hover {
+  text-shadow: 0 0 5px var(--core);
+}
+.gender-btn:hover::after,
+.gender-btn:hover::before {
+  box-shadow: 0 0 5px var(--core);
+}
+.gender-btn:hover::after {
+  right: -20%;
+}
+.gender-btn:hover::before {
+  left: -40%;
+}
+
+/*-------------------------List of Symptoms------------------------------*/
+#list {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+}
+.left-list {
+  position: relative;
+  z-index: 2;
+}
+.right-list {
+  position: absolute;
+  z-index: 1;
+  right: 60%;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.left-list:hover + .right-list,
+.right-list:hover {
+  right: 0;
+  opacity: 1;
+}
+.left-list,
+.right-list {
+  width: 40%;
+  height: 60vh;
+  outline: 1px solid var(--core);
+  overflow: auto;
+}
+.choice,
+.sub-choice {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 10%;
+  background-color: var(--main-darker);
+  border-bottom: 1px solid var(--core);
+  text-align: center;
+  font-size: 18px;
+  transition: all 0.2s;
+}
+input[name="check"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0;
+}
+/*-------------------------List of Symptoms Effects------------------------------*/
+.choice:hover,
+.sub-choice:hover {
+  background-color: var(--secondary);
+  box-shadow: 0 0 4px;
+  margin-bottom: 10px;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
